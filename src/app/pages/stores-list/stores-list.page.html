@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="ion-margin-end"></ion-menu-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="list-container" >  
+   <ion-list *ngFor = "let store of stores.data" >
+        <ion-item href="/store-details/{{store.id}}" detail>
+          <ion-lable class=" ion-margin-end ion-text-wrap ">{{ store.name}}</ion-lable>
+        </ion-item>
+     </ion-list>
+</ion-content>
